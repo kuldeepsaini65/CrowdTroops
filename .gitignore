@@ -1,0 +1,17 @@
+# Godot
+.godot/
+/android/build/
+
+# Secrets — never commit
+*.keystore
+*.jks
+export_credentials.cfg
+
+# Build output
+build/
+*.aab
+*.apk
+
+# OS / editor noise
+.DS_Store
+*.tmp

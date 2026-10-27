@@ -1,0 +1,28 @@
+extends Node
+## Global signal bus. Gameplay, UI and feedback systems talk through these
+## signals instead of holding references to each other.
+
+@warning_ignore("unused_signal")
+signal level_started(level: int)
+@warning_ignore("unused_signal")
+signal level_finished(won: bool, stats: Dictionary)
+@warning_ignore("unused_signal")
+signal wall_hp_changed(hp: int, max_hp: int)
+@warning_ignore("unused_signal")
+signal base_hp_changed(hp: int, max_hp: int)
+@warning_ignore("unused_signal")
+signal coins_changed(coins: int)
+@warning_ignore("unused_signal")
+signal champion_progress(fraction: float)
+@warning_ignore("unused_signal")
+signal shot_fired(is_champion: bool)
+@warning_ignore("unused_signal")
+signal gate_triggered(gate_index: int, count: int)
+@warning_ignore("unused_signal")
+signal base_hit(damage: int)
+@warning_ignore("unused_signal")
+signal wall_hit(damage: int)
+@warning_ignore("unused_signal")
+signal screen_shake_requested(strength: float)
+@warning_ignore("unused_signal")
+signal game_paused(paused: bool)

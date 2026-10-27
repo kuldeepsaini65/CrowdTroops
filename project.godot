@@ -1,0 +1,53 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+config/name="Gatecrush"
+config/description="Slide the cannon, fire your crowd through the gates, crush the fort."
+run/main_scene="res://scenes/game.tscn"
+config/quit_on_go_back=false
+config/features=PackedStringArray("4.7", "Mobile")
+config/icon="res://icon.svg"
+
+[autoload]
+
+GameEvents="*res://scripts/autoload/game_events.gd"
+SaveManager="*res://scripts/autoload/save_manager.gd"
+AudioManager="*res://scripts/autoload/audio_manager.gd"
+Haptics="*res://scripts/autoload/haptics.gd"
+
+[display]
+
+window/size/viewport_width=1080
+window/size/viewport_height=2340
+window/size/window_width_override=450
+window/size/window_height_override=975
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+window/handheld/orientation=1
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
+[physics]
+
+common/physics_ticks_per_second=60
+
+[rendering]
+
+renderer/rendering_method="mobile"
+renderer/rendering_method.mobile="mobile"
+rendering_device/fallback_to_opengl3=true
+textures/vram_compression/import_etc2_astc=true
+anti_aliasing/quality/msaa_3d=1
+lights_and_shadows/directional_shadow/soft_shadow_filter_quality=1
+environment/ssao/quality=0
